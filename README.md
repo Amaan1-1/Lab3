@@ -73,8 +73,8 @@ It includes:
 - **index.html** — Main webpage file  
 - **style.css** — Styling for layout, legend, and buttons  
 - **scripts/** — Includes **functions.js** and **script.js** for map initialization and interactivity  
-- **functions.js** — Helper functions for interactivity (popups, visibility, reset)  
-- **script.js** — Initializes map, adds sources and layers  
+  - **functions.js** — Helper functions for interactivity (popups, visibility, reset)  
+  - **script.js** — Initializes map, adds sources and layers  
 - **data/**  
   - **City_Landmarks.geojson**  
   - **open_data_img.png**  
