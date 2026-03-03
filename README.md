@@ -14,7 +14,7 @@ The web map displays **Public and Catholic Secondary Schools** in the **City of�
 
 ## Key Features
 
-### 1. Data‑Driven Styling Data
+### 1. Data‑Driven Styling
 Symbols are styled dynamically using a zoom‑based **interpolation expression**:
 
 - Circle radius increases smoothly with higher zoom levels.  
@@ -31,7 +31,7 @@ are displayed.
 Clicking on a school opens a popup showing:
 - School name (cleaned of redundant text like “(9–12)” or “(Cs)”)  
 - Formatted street address
-- Clicking on one type of school, makes the rest of that type glow on the map  
+- When hovering over a school, the symbol stroke increases in width to visually highlight all schools within that category
 The popup appears at the school’s location.
 
 ### 4. Visibility Toggle Buttons
