@@ -12,11 +12,11 @@ const map = new mapboxgl.Map({
 //Load map
 map.on('load', () => {
 
-    // Adding a source for City Landmarks that accesses the City_Landdmarks.geojson
+    // Adding a source for City Landmarks that accesses the City_Landmarks.geojson
     //This file contains locations of landmarks in Missisauga including schools
     map.addSource('City_Landmarks', {
         type: 'geojson',
-        data: '../data/City_Landmarks.geojson'
+        data: './data/City_Landmarks.geojson'
     });
 
     // Adding map controls for geocoding and navigation
