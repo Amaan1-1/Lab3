@@ -1,0 +1,40 @@
+<head>
+<!--All the meta tags and Mapbox GL script incorporation -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first web map</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css'
+        rel='stylesheet' />
+  <!-- Linking CSS file to the html file-->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.css" type="text/css">
+</head>
+
+<body>
+    <div class="header">
+        <!--This header provides map title, brief description, and reset button-->
+        <h1>Mississauga Secondary Schools</h1>
+        <p>
+            This map shows Public and Catholic Secondary Schools in Mississauga.<br>
+            Click any school to see its name and address.
+        </p>
+        <!-- Button resets the map view to its default center and zoom -->
+        <button id="reset-btn" class="visualize_button">Reset Map View</button>
+    </div>
+
+    <!--Displays color symbols and descriptions for school types,
+    the legend is dynamically populated using JavaScript!-->
+    <div class="legend" id="legend">
+        <h4>Mississauga Secondary Schools</h4>
+    </div>
+
+    <!-- The div where Mapbox GL JS renders the interactive map-->
+    <div id="my-map" class="map-container"></div>
+    <!--script.js initializes the map, adds sources, and sets up
+    interactivity and then functions.js contains reusable helper functions-->
+    <script src="script.js"></script>
+    <script src="functions.js"></script>
+    
+</body>
