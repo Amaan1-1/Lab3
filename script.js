@@ -35,6 +35,7 @@ map.on('load', () => {
     // Add button to reset map view to the default position and zoom
     resetButton(map, "reset-btn");
 
+    LatLngDisplay(map);
 
     // Since the data layer has all city landmarks, we will add a layer to the map 
     // that filters to only show Public Secondary schools
@@ -44,7 +45,8 @@ map.on('load', () => {
     // Popups will display the cleaned school name and address when clicked.
     addPopup(map, 'Public_Secondary_Schools');
     addPopup(map, 'Catholic_Secondary_Schools');
-    
+
+
     // Create legend for school categories with matching colors
     const legenditems = [
         { label: 'Public Secondary Schools', colour: '#4000ff' },

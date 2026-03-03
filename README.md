@@ -2,7 +2,7 @@
 
 The objective of this lab is to demonstrate **data‑driven styling**, **event‑based interactivity**, and **user interface integration** using **JavaScript** and **Mapbox GL JS**.
 
-The resulting web map displays **Public and Catholic Secondary Schools** in the **City of Mississauga**, Ontario. Each school is represented by an interactive point symbol that users can click to learn more about the school’s name and address.
+The resulting web map displays **Public and Catholic Secondary Schools** in the **City of Mississauga**. Each school is represented by an interactive point symbol that users can click to learn more about the school’s name and address.
 
 ---
 
@@ -64,12 +64,13 @@ It includes:
 
 ## Files
 
-├── index.html # Main webpage file
-├── style.css # Styling for layout, legend, and buttons
-├── script.js # Initializes map, adds sources and layers
-├── functions.js # Helper functions for interactivity (popups, visibility, reset)
-├── data/
-│ └── City_Landmarks.geojson
-└── README.md # Project documentation
+- **index.html** — Main webpage file  
+- **style.css** — Styling for layout, legend, and buttons  
+- **script.js** — Initializes map, adds sources and layers  
+- **functions.js** — Helper functions for interactivity (popups, visibility, reset)  
+- **data/**  
+  - **City_Landmarks.geojson**  
+- **README.md** — Project documentation
+
 
 

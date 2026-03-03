@@ -54,6 +54,16 @@ function addPopup(map, layerId){
     map.on('mouseleave', layerId, () => {
         map.getCanvas().style.cursor = '';
     });
+
+    // Add a hover effect by increasing stroke of all points within
+    // that layer when mouse is over a point
+    map.on('mousemove', layerId, () => {
+        map.setPaintProperty(layerId, 'circle-stroke-width', 3);
+    });
+
+    map.on('mouseleave', layerId, () => {
+        map.setPaintProperty(layerId, 'circle-stroke-width', 1.5);
+    });
         
 }
 
@@ -108,5 +118,19 @@ function UpdateVisibility(buttonId, label, map){
             document.getElementById(buttonId).innerHTML = "Hide";
             map.setLayoutProperty(label, 'visibility', 'visible');
         }
+    });
+}
+
+//Source https://docs.mapbox.com/mapbox-gl-js/example/mouse-position/
+//Show long and lat of mouse 
+function LatLngDisplay(map) {
+    map.on('mousemove', (e) => {
+        let coords = e.lngLat.wrap();  
+        const lng = coords.lng.toString().slice(0, 6);  
+        const lat = coords.lat.toString().slice(0, 5);    
+        //source for string slicing: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+
+        document.getElementById('coordinate-display').innerHTML = "Longitude: " + lng + " | Latitude: " + lat;
     });
 }
