@@ -1,8 +1,6 @@
 ## Overview
 
-The objective of this lab is to demonstrate **data‑driven styling**, **event‑based interactivity**, and **user interface integration** using **JavaScript** and **Mapbox GL JS**.
-
-The resulting web map displays **Public and Catholic Secondary Schools** in the **City of Mississauga**. Each school is represented by an interactive point symbol that users can click to learn more about the school’s name and address.
+The web map displays **Public and Catholic Secondary Schools** in the **City of Mississauga**. Each school is represented by an interactive point symbol that users can click to learn more about the school’s name and address.
 
 ---
 
@@ -32,7 +30,8 @@ are displayed.
 ### 3. Pop‑Up Interactivity
 Clicking on a school opens a popup showing:
 - School name (cleaned of redundant text like “(9–12)” or “(Cs)”)  
-- Formatted street address  
+- Formatted street address
+- Clicking on one type of school, makes the rest of that type glow on the map  
 The popup appears at the school’s location.
 
 ### 4. Visibility Toggle Buttons
