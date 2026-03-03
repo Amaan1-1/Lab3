@@ -52,6 +52,12 @@ It includes:
 - Clear section headers and consistent commenting throughout the code for readability.  
 - Clean page layout with a descriptive title and brief introduction.
 
+### 8. Longitude and Latitude
+- Shows the current longitude and latitude at the bottom left of the screen
+
+### 9. Ward Filter
+- Allows user to choose a ward from a drop down menu to only show schools within that specific ward
+
 ---
 
 ## Map Controls

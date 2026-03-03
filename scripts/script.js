@@ -16,7 +16,7 @@ map.on('load', () => {
     //This file contains locations of landmarks in Missisauga including schools
     map.addSource('City_Landmarks', {
         type: 'geojson',
-        data: './data/City_Landmarks.geojson'
+        data: '../data/City_Landmarks.geojson'
     });
 
     // Adding map controls for geocoding and navigation
@@ -35,6 +35,7 @@ map.on('load', () => {
     // Add button to reset map view to the default position and zoom
     resetButton(map, "reset-btn");
 
+    //Display longitude and latitude of current position
     LatLngDisplay(map);
 
     // Since the data layer has all city landmarks, we will add a layer to the map 
@@ -52,6 +53,7 @@ map.on('load', () => {
         { label: 'Public Secondary Schools', colour: '#4000ff' },
         { label: 'Catholic Secondary Schools', colour: '#09e514' },
     ];
+
 
     // For each array item create a row to put the label and colour in
     legenditems.forEach(({ label, colour }) => {
@@ -92,6 +94,14 @@ map.on('load', () => {
         // Connect the button to the function that toggles map visibility
         UpdateVisibility(button.id, layerId, map);
     });
+
+    const layersToFilter = [
+        { id: 'Public_Secondary_Schools', type: 'Schools, Public Secondary' },
+        { id: 'Catholic_Secondary_Schools', type: 'Schools, Cath. Secondary' }
+    ];
+
+    //Ward Filter for both layer
+    WardFilter(map, layersToFilter);
 
 
 });

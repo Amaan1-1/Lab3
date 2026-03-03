@@ -130,7 +130,28 @@ function LatLngDisplay(map) {
         const lat = coords.lat.toString().slice(0, 5);    
         //source for string slicing: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 
-
         document.getElementById('coordinate-display').innerHTML = "Longitude: " + lng + " | Latitude: " + lat;
+    });
+}
+
+
+function WardFilter(map, layers) {
+     // add change event listener to ward dropdown
+    document.getElementById('ward-select').addEventListener('change', (e) => {
+
+        for(let i = 0; i < layers.length; i++){
+             // show all schools of this type if "all" selected
+            if(e.target.value === "all"){
+                map.setFilter(layers[i].id, ['==', ['get', 'TYPEDESC'], layers[i].type]);
+            }
+            else{
+                // filtering by specific ward if selected
+                map.setFilter(layers[i].id, [
+                    'all',
+                    ['==', ['get', 'TYPEDESC'], layers[i].type],
+                    ['==', ['get', 'WARD'], e.target.value]
+                ]);
+            }
+        }
     });
 }

@@ -7,12 +7,18 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css'
         rel='stylesheet' />
   <!-- Linking CSS file to the html file-->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.min.js"></script>
   <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.css" type="text/css">
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="sources.html" class="nav-link">Sources</a>
+    </nav>
+    
     <div class="header">
         <!--This header provides map title, brief description, and reset button-->
         <h1>Mississauga Secondary Schools</h1>
@@ -28,16 +34,34 @@
     the legend is dynamically populated using JavaScript!-->
     <div class="legend" id="legend">
         <h4>Mississauga Secondary Schools</h4>
-        
+        <form>
+            <fieldset id="boundaryfieldset">
+                <label class="option-label">Select Ward Boundary</label>
+                <select id="ward-select" name="ward-select">
+                    <option value="" disabled selected>Select ward...</option>
+                    <option value="W1">Ward 1</option>
+                    <option value="W2">Ward 2</option>
+                    <option value="W3">Ward 3</option>
+                    <option value="W5">Ward 5</option>
+                    <option value="W6">Ward 6</option>
+                    <option value="W7">Ward 7</option>
+                    <option value="W8">Ward 8</option>
+                    <option value="W9">Ward 9</option>
+                    <option value="W10">Ward 10</option>
+                    <option value="W11">Ward 11</option>
+                    <option value="all">Show all</option>
+                </select>
+            </fieldset>
+        </form>
     </div>
 
-    <div id="coordinate-display" class="coordinate-info">Longitude: 0 | Latitude: 0</div>
+    <div id="coordinate-display" class="coordinate-info">Longitude: -79.65 | Latitude: 43.61</div>
 
     <!-- The div where Mapbox GL JS renders the interactive map-->
     <div id="my-map" class="map-container"></div>
     <!--script.js initializes the map, adds sources, and sets up
     interactivity and then functions.js contains reusable helper functions-->
-    <script src="script.js"></script>
-    <script src="functions.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/functions.js"></script>
     
 </body>
